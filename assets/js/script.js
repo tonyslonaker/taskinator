@@ -18,11 +18,13 @@ var taskFormHandler = function(event) {
   document.querySelector("input[name='task-name']").value = "";
   document.querySelector("select[name='task-type']").selectedIndex = 0;
 
+  // package up data as an object
   var taskDataObj = {
     name: taskNameInput,
     type: taskTypeInput
   };
 
+  // send it as an argument to createTaskEl
   createTaskEl(taskDataObj);
 };
 
